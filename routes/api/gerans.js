@@ -4,14 +4,16 @@ const { gerans: ctrl } = require("../../controllers");
 
 const router = express.Router();
 
-router.get("/", ctrlWrapper(ctrl.getAll));
+router.get("/", ctrlWrapper(ctrl.getAllGerans));
 
-router.post("/", auth, ctrlWrapper(ctrl.add));
+router.get("/owner", ctrlWrapper(ctrl.getGeransByOwner));
 
-router.get("/:id", ctrlWrapper(ctrl.getById));
+router.post("/", auth, ctrlWrapper(ctrl.addGeran));
 
-router.put("/:id", ctrlWrapper(ctrl.updateById));
+router.get("/:id", ctrlWrapper(ctrl.getGeranById));
 
-router.delete("/:id", ctrlWrapper(ctrl.removeById));
+router.put("/:id", ctrlWrapper(ctrl.updateGeranById));
+
+router.delete("/:id", ctrlWrapper(ctrl.removeGeranById));
 
 module.exports = router;

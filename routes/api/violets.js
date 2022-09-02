@@ -4,8 +4,16 @@ const { violets: ctrl } = require("../../controllers");
 
 const router = express.Router();
 
-router.get("/", ctrlWrapper(ctrl.getAll));
+router.get("/", ctrlWrapper(ctrl.getAllViolets));
 
-router.post("/", auth, ctrlWrapper(ctrl.add));
+router.get("/owner", ctrlWrapper(ctrl.getVioletsByOwner));
+
+router.post("/", auth, ctrlWrapper(ctrl.addViolet));
+
+router.get("/:id", ctrlWrapper(ctrl.getVioletById));
+
+router.put("/:id", ctrlWrapper(ctrl.updateVioletById));
+
+router.delete("/:id", ctrlWrapper(ctrl.removeVioletById));
 
 module.exports = router;

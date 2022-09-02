@@ -6,6 +6,8 @@ const router = express.Router();
 
 router.get("/", ctrlWrapper(ctrl.getAllAchimenes));
 
+router.get("/owner", ctrlWrapper(ctrl.getAchimenesByOwner));
+
 router.post("/", auth, ctrlWrapper(ctrl.addAchimene));
 
 router.get("/:id", ctrlWrapper(ctrl.getAchimenById));
