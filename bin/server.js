@@ -8,5 +8,5 @@ mongoose
   .then(() => app.listen(PORT, () => console.log("Server started")))
   .catch((err) => {
     console.log(err);
-    process.exit();
+    process.exit(1);
   });
