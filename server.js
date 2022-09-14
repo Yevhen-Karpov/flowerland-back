@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 
 const app = require("./app");
-const { PORT = 8080 } = process.env;
+const { DB_HOST, PORT = 8080 } = process.env;
 
 mongoose
-  .connect(process.env.DB_HOST)
+  .connect(DB_HOST, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(PORT, () => console.log("Server started")))
   .catch((err) => {
     console.log(err);
