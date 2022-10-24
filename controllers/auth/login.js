@@ -19,8 +19,8 @@ const login = async (req, res, next) => {
     }
 
     const payload = { id: user._id };
-    const token = jwt.sign(payload, process.env.SECRET_KEY, {
-      expiresIn: "1h",
+    const token = jwt.sign(payload, SECRET_KEY, {
+      expiresIn: "24h",
     });
 
     await User.findByIdAndUpdate(user._id, { token });
@@ -30,10 +30,6 @@ const login = async (req, res, next) => {
       code: 200,
       data: {
         token,
-        // user: {
-        //   email,
-        //   password,
-        // },
       },
     });
   } catch (error) {
