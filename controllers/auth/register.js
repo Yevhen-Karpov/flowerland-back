@@ -25,6 +25,7 @@ const register = async (req, res, next) => {
           name,
           email,
         },
+        token: User.createToken(result),
       },
     });
   } catch (error) {
