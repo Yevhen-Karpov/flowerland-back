@@ -23,7 +23,7 @@ const login = async (req, res, next) => {
       expiresIn: "24h",
     });
 
-    await User.findByIdAndUpdate(user._id, { token });
+    await User.findByIdAndUpdate(user._id, { token, user });
 
     res.json({
       status: "success",
