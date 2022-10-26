@@ -30,6 +30,10 @@ const login = async (req, res, next) => {
       code: 200,
       data: {
         token,
+        user: {
+          email: user.email,
+          name: user.name,
+        },
       },
     });
   } catch (error) {
