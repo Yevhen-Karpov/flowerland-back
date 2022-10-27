@@ -6,7 +6,7 @@ const getById = async (req, res, next) => {
   try {
     const { id } = req.params;
     const flower = await Flower.findById(id);
-    if (!geran) {
+    if (!flower) {
       throw new NotFound("Flower not found");
     }
     res.status(200).json({
