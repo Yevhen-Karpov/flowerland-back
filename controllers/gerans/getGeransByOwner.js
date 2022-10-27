@@ -1,9 +1,9 @@
-const { Geran } = require("../../models");
+const { Flower } = require("../../models");
 
 const getGeranByOwner = async (req, res, next) => {
   try {
     const { _id } = req.user;
-    const gerans = await Geran.find({ owner: _id }).populate(
+    const gerans = await Flower.find({ owner: _id }).populate(
       "owner",
       "_id name email"
     );

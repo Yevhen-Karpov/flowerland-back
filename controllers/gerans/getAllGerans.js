@@ -1,8 +1,8 @@
-const { Geran } = require("../../models");
+const { Flower } = require("../../models");
 
 const getAll = async (req, res, next) => {
   try {
-    const gerans = await Geran.find({});
+    const gerans = await Flower.find({});
     res.json({
       status: "success",
       code: 200,
