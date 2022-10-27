@@ -1,8 +1,8 @@
-const { Flower } = require("../../models");
+const { Geran } = require("../../models");
 
 const add = async (req, res, next) => {
   try {
-    const geran = await Flower.create(req.body);
+    const geran = await Geran.create(req.body);
     res.status(201).json({
       status: "success",
       code: 201,

@@ -1,11 +1,11 @@
 const { NotFound } = require("http-errors");
 
-const { Flower } = require("../../models");
+const { Geran } = require("../../models");
 
 const updateGeranById = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const geran = await Flower.findByIdAndUpdate(id, req.body, {
+    const geran = await Geran.findByIdAndUpdate(id, req.body, {
       new: true,
     });
     if (!geran) {
