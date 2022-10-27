@@ -5,7 +5,7 @@ const getByOwner = require("./getByOwner");
 const removeById = require("./removeById");
 const updateById = require("./updateById");
 
-const collections = {
+module.exports = {
   add,
   getAll,
   getById,
@@ -13,5 +13,3 @@ const collections = {
   removeById,
   updateById,
 };
-
-module.exports = collections;
