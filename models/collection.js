@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-const flowerSchema = new Schema(
+const collectionSchema = new Schema(
   {
     imgUrl: {
       type: String,
@@ -10,14 +10,14 @@ const flowerSchema = new Schema(
       type: String,
       required: true,
     },
-    descr: {
-      type: String,
-    },
+    // descr: {
+    //   type: String,
+    // },
 
-    active: {
-      type: Boolean,
-      default: true,
-    },
+    // active: {
+    //   type: Boolean,
+    //   default: true,
+    // },
     owner: {
       type: Schema.Types.ObjectId,
       ref: "user",
@@ -29,6 +29,6 @@ const flowerSchema = new Schema(
   }
 );
 
-const Flower = model("flover", flowerSchema);
+const Collection = model("collection", collectionSchema);
 
-module.exports = Flower;
+module.exports = Collection;

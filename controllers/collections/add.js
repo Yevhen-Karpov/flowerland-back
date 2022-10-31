@@ -1,13 +1,14 @@
-const { Flower } = require("../../models");
+const { Collection } = require("../../models");
 
 const add = async (req, res, next) => {
   try {
-    const flower = await Flower.create(req.body);
+    const { _id } = req.user;
+    const collection = await Collection.create({ ...req.body, owner: _id });
     res.status(201).json({
       status: "success",
       code: 201,
       data: {
-        result: flower,
+        result: collection,
       },
     });
   } catch (error) {
