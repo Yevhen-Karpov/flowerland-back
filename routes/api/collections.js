@@ -9,3 +9,5 @@ router.get("/", auth, ctrlWrapper(ctrl.getAll));
 // router.get("/owner", ctrlWrapper(ctrl.getCollectionsByOwner));
 
 router.post("/", auth, ctrlWrapper(ctrl.add));
+
+module.exports = router;
