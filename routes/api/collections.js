@@ -10,4 +10,6 @@ router.get("/", auth, ctrlWrapper(ctrl.getAll));
 
 router.post("/", auth, ctrlWrapper(ctrl.add));
 
+router.delete("/:collectionId", auth, ctrlWrapper(ctrl.removeById));
+
 module.exports = router;
