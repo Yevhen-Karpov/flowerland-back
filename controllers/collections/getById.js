@@ -1,11 +1,11 @@
 const { NotFound } = require("http-errors");
 
-const { Flower } = require("../../models");
+const { Collection } = require("../../models");
 
 const getById = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const flower = await Flower.findById(id);
+    const collection = await Collection.findById(id);
     if (!flower) {
       throw new NotFound("Flower not found");
     }
@@ -13,7 +13,7 @@ const getById = async (req, res, next) => {
       status: "success",
       code: 200,
       data: {
-        result: flower,
+        result: collection,
       },
     });
   } catch (error) {

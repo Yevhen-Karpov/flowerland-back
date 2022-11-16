@@ -1,9 +1,9 @@
-const { Flower } = require("../../models");
+const { Collection } = require("../../models");
 
 const getByOwner = async (req, res, next) => {
   try {
     const { _id } = req.user;
-    const flowers = await Flower.find({ owner: _id }).populate(
+    const collections = await Collection.find({ owner: _id }).populate(
       "owner",
       "_id name email"
     );
@@ -11,7 +11,7 @@ const getByOwner = async (req, res, next) => {
       status: "success",
       code: 200,
       data: {
-        result: flowers,
+        result: collections,
       },
     });
   } catch (error) {

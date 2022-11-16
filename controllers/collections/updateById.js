@@ -1,11 +1,11 @@
 const { NotFound } = require("http-errors");
 
-const { Flower } = require("../../models");
+const { Collection } = require("../../models");
 
 const updateById = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const flower = await Flower.findByIdAndUpdate(id, req.body, {
+    const flower = await Collection.findByIdAndUpdate(id, req.body, {
       new: true,
     });
     if (!Flower) {

@@ -1,10 +1,10 @@
 const { NotFound } = require("http-errors");
 
-const { Flower } = require("../../models");
+const { Collection } = require("../../models");
 
 const removeById = async (req, res) => {
   const { id } = req.params;
-  const result = await Flower.findByIdAndDelete(id);
+  const result = await Collection.findByIdAndDelete(id);
   if (!result) {
     throw new NotFound("Not found");
   }
