@@ -4,6 +4,7 @@ const getVioletsByOwner = require("./getVioletsByOwner");
 const getVioletById = require("./getVioletById");
 const updateVioletById = require("./updateVioletById");
 const removeVioletById = require("./removeVioletById");
+const updateVioletActiveById = require("./updateVioletActiveById");
 
 module.exports = {
   getAllViolets,
@@ -12,4 +13,5 @@ module.exports = {
   getVioletById,
   updateVioletById,
   removeVioletById,
+  updateVioletActiveById,
 };

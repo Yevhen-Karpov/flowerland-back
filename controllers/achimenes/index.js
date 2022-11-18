@@ -4,6 +4,7 @@ const getAchimenById = require("./getAchimenById");
 const updateAchimenById = require("./updateAchimeneById");
 const removeAchimeneById = require("./removeAchimeneById");
 const getAchimenesByOwner = require("./getAchimenesByOwner");
+const updateAchimeneActiveById = require("./updateAchimeneActiveById");
 
 module.exports = {
   getAllAchimenes,
@@ -12,4 +13,5 @@ module.exports = {
   updateAchimenById,
   removeAchimeneById,
   getAchimenesByOwner,
+  updateAchimeneActiveById,
 };
