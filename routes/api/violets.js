@@ -8,7 +8,7 @@ router.get("/", ctrlWrapper(ctrl.getAllViolets));
 
 router.get("/owner", ctrlWrapper(ctrl.getVioletsByOwner));
 
-router.post("/", auth, ctrlWrapper(ctrl.addViolet));
+router.post("/", ctrlWrapper(ctrl.addViolet));
 
 router.get("/:id", ctrlWrapper(ctrl.getVioletById));
 

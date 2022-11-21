@@ -8,7 +8,7 @@ router.get("/", ctrlWrapper(ctrl.getAllGerans));
 
 router.get("/owner", ctrlWrapper(ctrl.getGeransByOwner));
 
-router.post("/", auth, ctrlWrapper(ctrl.addGeran));
+router.post("/", ctrlWrapper(ctrl.addGeran));
 
 router.get("/:id", ctrlWrapper(ctrl.getGeranById));
 
