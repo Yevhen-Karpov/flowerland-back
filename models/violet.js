@@ -13,10 +13,18 @@ const violetSchema = new Schema(
     descr: {
       type: String,
     },
-
+    price: {
+      type: String,
+      min: 1,
+    },
     active: {
       type: Boolean,
       default: true,
+    },
+    status: {
+      type: String,
+      enum: ["є в наявності", "немає в наявності", "під замовлення"],
+      default: "є в наявності",
     },
     owner: {
       type: Schema.Types.ObjectId,
