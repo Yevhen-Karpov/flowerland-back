@@ -14,7 +14,7 @@ router.get("/:id", ctrlWrapper(ctrl.getAchimenById));
 
 router.put("/:id", ctrlWrapper(ctrl.updateAchimenById));
 
-router.patch("/:id/active", ctrlWrapper(ctrl.updateAchimeneActiveById));
+router.patch("/:id", ctrlWrapper(ctrl.updateAchimeneActiveById));
 
 router.delete("/:id", ctrlWrapper(ctrl.removeAchimeneById));
 

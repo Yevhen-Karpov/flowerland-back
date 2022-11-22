@@ -14,7 +14,7 @@ router.get("/:id", ctrlWrapper(ctrl.getVioletById));
 
 router.put("/:id", ctrlWrapper(ctrl.updateVioletById));
 
-router.patch("/:id/active", ctrlWrapper(ctrl.updateVioletActiveById));
+router.patch("/:id", ctrlWrapper(ctrl.updateVioletActiveById));
 
 router.delete("/:id", ctrlWrapper(ctrl.removeVioletById));
 

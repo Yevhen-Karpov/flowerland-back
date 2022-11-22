@@ -14,7 +14,7 @@ router.get("/:id", ctrlWrapper(ctrl.getGeranById));
 
 router.put("/:id", ctrlWrapper(ctrl.updateGeranById));
 
-router.patch("/:id/active", ctrlWrapper(ctrl.updateGeranActiveById));
+router.patch("/:id", ctrlWrapper(ctrl.updateGeranActiveById));
 
 router.delete("/:id", ctrlWrapper(ctrl.removeGeranById));
 
