@@ -9,6 +9,7 @@ const violetsRouter = require("./routes/api/violets");
 const authRouter = require("./routes/api/auth");
 const usersRouter = require("./routes/api/users");
 const collectionsRouter = require("./routes/api/collections");
+const commentsRouter = require("./routes/api/comments");
 
 const app = express();
 dotenv.config();
@@ -22,5 +23,6 @@ app.use("/api/violets", violetsRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/collections", collectionsRouter);
+app.use("/api/comments", commentsRouter);
 
 module.exports = app;
