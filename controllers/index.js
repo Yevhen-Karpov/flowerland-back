@@ -4,6 +4,7 @@ const violets = require("./violets");
 const auth = require("./auth");
 const users = require("./users");
 const collections = require("./collections");
+const comments = require("./comments");
 
 module.exports = {
   achimenes,
@@ -12,4 +13,5 @@ module.exports = {
   auth,
   users,
   collections,
+  comments,
 };
